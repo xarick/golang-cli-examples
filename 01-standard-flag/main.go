@@ -7,11 +7,6 @@ import (
 	"strings"
 )
 
-// go run .\main.go .\hello.go .\calculate.go calc -a 10 -b 3 -op add
-// go run .\main.go .\hello.go .\calculate.go hi -name bobur -age 28 -debug true
-
-// go run .\main.go .\hello.go .\calculate.go hi -help
-
 func main() {
 	// Subcommand lar
 	hiCmd := flag.NewFlagSet("hi", flag.ExitOnError)
@@ -47,3 +42,8 @@ func main() {
 		log.Fatalf("Noto'g'ri subcommand: %s", flag.Arg(0))
 	}
 }
+
+// go run .\main.go .\hello.go .\calculate.go calc -a 10 -b 3 -op add
+// go run .\main.go .\hello.go .\calculate.go hi -name bobur -age 28 -debug true
+
+// go run .\main.go .\hello.go .\calculate.go hi -help
