@@ -25,3 +25,5 @@ func main() {
 // go run main.go pwd -s 20 -t all
 
 // go run main.go validate --email test123@example.com
+
+// go run main.go hash --text salom dunyo!

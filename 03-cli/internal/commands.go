@@ -45,5 +45,22 @@ func GetCommands() []*cli.Command {
 				return nil
 			},
 		},
+		{
+			Name:  "hash",
+			Usage: "Matnni hash qiladi",
+			Flags: []cli.Flag{
+				&cli.StringFlag{
+					Name:     "text",
+					Usage:    "Hash qilinadigan matn",
+					Required: true,
+				},
+			},
+			Action: func(c *cli.Context) error {
+				text := c.String("text")
+				hash := GenerateHash(text)
+				fmt.Printf("Hash: %s\n", hash)
+				return nil
+			},
+		},
 	}
 }
